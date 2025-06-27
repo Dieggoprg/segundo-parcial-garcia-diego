@@ -1,11 +1,11 @@
-import { Router } from "express";
-import express from "express"
+import { Router, express } from "express";
+import { ObtenerTodaslasMovies, ObtenerMoviesPorID, CrearMovies, actualizarMovies, eliminarMovie  } from "../controllers/movie.controllers.js";
 const ruta = express.Router();
 
-ruta.get("/movies", (req, res) => {
-    return res.status(200).json("TODAS LAS PELICULAS")
-})
-
-ruta.post("//movies", )
+ruta.get("/movies", ObtenerTodaslasMovies)
+ruta.get("/movies/:id", ObtenerMoviesPorID)
+ruta.post("/movies", CrearMovies)
+ruta.put("/movies/:id", actualizarMovies)
+ruta.delete("movies/:id", eliminarMovie)
 
 export {ruta};
