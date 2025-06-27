@@ -1,4 +1,4 @@
-import { Router, express } from "express";
+import express from "express";
 import { ObtenerTodaslasMovies, ObtenerMoviesPorID, CrearMovies, actualizarMovies, eliminarMovie  } from "../controllers/movie.controllers.js";
 const ruta = express.Router();
 

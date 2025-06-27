@@ -1,5 +1,4 @@
-import { where } from "sequelize";
-import { Movies } from "../models/movie.mode.js";
+import { Movies } from "../models/movie.model.js";
 
 export const ObtenerTodaslasMovies =  async (req, res) => { 
     try {
